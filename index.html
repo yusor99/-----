@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  direction: rtl;
+  font-size: large;
+}
+.title{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-size: xx-large;
+}
+input[type=text],input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-30 {
+  float: right;
+  width: 30%;
+}
+
+.col-70 {
+  float: right;
+  width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+.row{
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.flex{
+	display: flex;
+	justify-content: space-between;
+	align-items:baseline;
+	width: 100%;
+}
+.flex-right{
+	width: 40%;
+}
+.flex-left{
+	width: 55%;
+}
+.header{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+	font-weight: 700;
+	align-items: center;
+	background-color: #a8a6a6;
+	font-size: x-large;
+	padding: 8px;
+	border-radius: 4px;
+
+}
+.footer{
+	display: flex;
+	flex-direction: row;
+	width: 70%;
+	justify-content: space-between;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-30, .col-70, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2 class="title">استمارة تقييم الموظفين في مجلس القضاء الاعلى </h2>
+
+
+<div class="container">
+  <form action="/action_page.php">
+<div class="flex">
+	<div class="flex-right">
+		<div class="row">
+		<div class="col-30">
+		  <label for="fname">اسم الموظف</label>
+		</div>
+		<div class="col-70">
+		  <input type="text" id="fname" name="firstname" placeholder="الاسم الثلاثي">
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-30">
+		  <label for="lname">العنوان الوظيفي</label>
+		</div>
+		<div class="col-70">
+		  <input type="text" id="lname" name="lastname" placeholder="عنوانك الوظيفي">
+		</div>
+	  </div>
+	  <div class="row">
+		  <div class="col-30">
+			<label for="lname">التحصيل الدراسي </label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="التحصيل الدراسي (بكلوريوس - دبلوم - ماجستير)">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname">محل العمل  </label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="محل عملك">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname">اسم المحكمة او القسم </label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="اسم المحكمة او القسم">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname"> اسم الدائرة المنسب اليها</label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="اسم الدائرة المنسب اليها">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname"> الدرجة</label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="الدرجة الوظيفية">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname"> المرحلة</label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="المرحلة">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname"> تاريخ الاستحقاق</label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="تاريخ الاستحقاق">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname"> الرقم الوظيفي</label>
+		  </div>
+		  <div class="col-70">
+			<input type="number" id="lname" name="lastname" placeholder="رقمك الوظيفي">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname"> الراتب الحالي</label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="الراتب الحالي">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-30">
+			<label for="lname"> الراتب الجديد</label>
+		  </div>
+		  <div class="col-70">
+			<input type="text" id="lname" name="lastname" placeholder="الراتب الجديد">
+		  </div>
+		</div>
+	</div>
+  <div class="flex-left">
+	<div class="row header">
+<div>المعايير العامة</div>
+<div>التقييم</div>
+	</div>
+		  <div class="row">
+		<div class="col-30">
+		  <label for="country">المهارة على تنسيق العمل المكلف به</label>
+		</div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+  المشاركة في التخطيط وابداء المقترحات المناسبة					</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+  مهارته في ادارة الوقت					</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+  القدرة على تنفيذ التوجيهات ومتابعة اعماله					</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+  المعرفة بأهداف ونظم العمل ومهام المستوى التنظيمي الذي يعمل فيه واجراءاته					</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+  السرعة والدقة في انجاز العمل					</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+  القدرة على التحديد الجيد لأوليات العمل والتغلب على مشاكل ومعوقات العمل
+		  </label>
+		</div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country" >  امكانية تحمل مسوؤلية اعلى</label>
+		</div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">المحافظة على سرية العمل     </label>
+		</div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+  </div>
+  </div>
+  <div class="">
+	<div class="row header">
+<div> السمات الشخصية</div>
+<div>التقييم</div>
+	</div>
+		  <div class="row">
+		<div class="col-30">
+		  <label for="country">القدرة على الحوار وعرض الرأي والعمل بروح الفريق</label>
+		</div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+الاهتمام بالمظهر</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+رغبته في التطوير الذاتي</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+القدرة على الابداع والابتكار	</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+	
+  </div>
+  <div class="">
+	<div class="row header">
+<div> العلاقات مع</div>
+<div>التقييم</div>
+	</div>
+		  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+الرؤساء
+		  </label>
+		</div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+			  <div class="row">
+		<div class="col-30">
+		  <label for="country">
+الزملاء			</label>      </div>
+		
+		<div class="col-70">
+		  <input type="radio" id="age1" name="age" value="ضعيف">
+		  <label for="age1">ضعيف</label>
+		  <input type="radio" id="age2" name="age" value="مقبول">
+		  <label for="age2">مقبول</label> 
+		  <input type="radio" id="age3" name="age" value="متوسط">
+		  <label for="age2">متوسط</label> 
+		  <input type="radio" id="age3" name="age" value="جيد">
+		  <label for="age2">جيد</label> 
+		  <input type="radio" id="age3" name="age" value="جيد جدا">
+		  <label for="age2">جيد جدا</label> 
+		  <input type="radio" id="age3" name="age" value="ممتاز">
+		  <label for="age3">ممتاز</label>
+		</div>
+	  </div>
+	
+	  </div>
+</div>
+<div class="row footer">
+
+	<div class="col-30">
+		<label for="country">
+			رأي المسؤول المباشر وهل يصلح/تصلح لأشغال الوظيفة الاعلى ومنحه العلاوة السنوية في حالة عدم صالحيته وتقديم المقترحات بشأن وسائل تنمية قدرات وكفاءة الموظف</label>      </div>
+	  
+	  <div class="">
+		<input type="radio" id="age1" name="age" value="يصلح">
+		<label for="age1">يصلح</label>
+		<input type="radio" id="age2" name="age" value="لا يصلح">
+		<label for="age2">لا يصلح</label> 
+
+	  </div>
+	</div>
+
+</div>
+    <div class="row">
+      <input type="submit" value="ارسال">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
