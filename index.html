@@ -102,6 +102,18 @@ input[type=submit]:hover {
 	width: 70%;
 	justify-content: space-between;
 }
+.cont-sig{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-evenly;
+}
+.sig{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000000bd;
+	border-radius: 4px;
+}
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .col-30, .col-70, input[type=submit] {
@@ -557,7 +569,16 @@ input[type=submit]:hover {
 
 	  </div>
 	</div>
-
+<div class="row cont-sig">
+	<div>
+		<p>المسؤول المباشر </p>
+		<p class="sig"></p>
+	</div>
+	<div>
+		<p>المدير العام  </p>
+		<p class="sig"></p>
+	</div>
+</div>
 </div>
     <div class="row">
       <input type="submit" value="ارسال">
